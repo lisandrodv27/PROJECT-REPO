@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        docker_username=credentials("dockeruser")
-        docker_password=credentials("dockerpasswd")
+        dockeruser=credentials("dockeruser")
+        dockerpasswd=credentials("dockerpasswd")
     }
     
     stages {
