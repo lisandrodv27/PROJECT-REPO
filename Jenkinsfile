@@ -19,23 +19,13 @@ pipeline {
             
         stage("Build frontend/backend and push to DockerHub") {
           steps {
-            sh "cd frontend"
-            sh "sudo docker build -t lisandrodv27/frontend-build:latest ."
-            sh "sudo docker push lisandrodv27/frontend-build:latest"
-            sh "cd .."
-            sh "cd backend"
-            sh "sudo docker build -t lisandrodv27/backend-build:latest ."
-            sh "sudo docker push lisandrodv27/backend-build:latest"
+            sh "./scripts/build-push.sh "
           }
         }
  
         stage("Run docker-compose and tests") {
            steps {
-            
-            sh "docker-compose up -d"
-            sh "sudo docker exec backend bash -c 'pytest tests/ --cov application'"
-            sh "sudo docker exec frontend bash -c 'pytest tests/ --cov application'"
-            sh "sudo docker-compose down"
+            sh "./scripts/run.sh"
            }
          }
         
