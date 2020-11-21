@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage("Log into DockerHub") {
           steps {
-              sh "sudo docker login --username=${dockeruser} -password=${dockerpasswd}"
+              sh "sudo docker login --username=${dockeruser} --password=${dockerpasswd}"
           }
         }
             
