@@ -13,8 +13,7 @@ pipeline {
             
         stage("Clone repository and access it") {
           steps {
-            sh "git clone https://github.com/lisandrodv27/PROJECT-REPO.git"
-            sh "cd PROJECT-REPO" 
+            sh "./scripts/repo-clone-access.sh"
           }
         }  
             
