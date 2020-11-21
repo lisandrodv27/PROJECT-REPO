@@ -1,23 +1,38 @@
 pipeline {
     agent any
+    environment {
+        docker_username=credentials("dockeruser")
+        docker_password=credentials("dockerpasswd")
+    }
+    
     stages {
-        stage("Build frontend/backend and push to DockerHub") {
+        stage("Log into DockerHub") {
+            steps {
+                sh "sudo docker login --username=${dockeruser} -password=${dockerpasswd}"
+        }
+            
+        stage("Clone repository and access it") {
           steps {
             sh "git clone https://github.com/lisandrodv27/PROJECT-REPO.git"
+            sh "cd PROJECT-REPO" 
+          }
+        }  
+            
+        stage("Build frontend/backend and push to DockerHub") {
+          steps {
             sh "cd frontend"
-            sh "sudo docker build -t lisandrodv27/frontend-build ."
+            sh "sudo docker build -t lisandrodv27/frontend-build:latest ."
+            sh "sudo docker push lisandrodv27/frontend-build:latest"
             sh "cd .."
             sh "cd backend"
-            sh "sudo docker build -t lisandrodv27/backend-build ."
-            sh "sudo docker login"
-            sh "sudo docker push lisandrodv27/frontend-build"
-            sh "sudo docker push lisandrodv27/backend-build"
+            sh "sudo docker build -t lisandrodv27/backend-build:latest ."
+            sh "sudo docker push lisandrodv27/backend-build:latest"
           }
         }
  
-         stage("Run docker-compose and tests") {
+        stage("Run docker-compose and tests") {
            steps {
-            sh "cd PROJECT-REPO"
+            
             sh "docker-compose up -d"
             sh "sudo docker exec backend bash -c 'pytest tests/ --cov application'"
             sh "sudo docker exec frontend bash -c 'pytest tests/ --cov application'"
