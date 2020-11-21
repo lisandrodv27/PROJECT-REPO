@@ -9,6 +9,7 @@ pipeline {
         
         stage("Testing stage") {
           steps {
+            sh "git clone 
             sh "sudo docker exec backend bash -c 'pytest tests/ --cov application'"
             sh "sudo docker exec frontend bash -c 'pytest tests/ --cov application'"
             sh "sudo docker-compose down"
