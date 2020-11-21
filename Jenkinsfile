@@ -5,10 +5,10 @@ pipeline {
           steps {
             sh "git clone https://github.com/lisandrodv27/PROJECT-REPO.git"
             sh "cd frontend"
-            sh "sudo docker build -t lisandrodv27/frontend-build"
+            sh "sudo docker build -t lisandrodv27/frontend-build ."
             sh "cd .."
             sh "cd backend"
-            sh "sudo docker build -t lisandrodv27/backend-build"
+            sh "sudo docker build -t lisandrodv27/backend-build ."
             sh "sudo docker login"
             sh "sudo docker push lisandrodv27/frontend-build"
             sh "sudo docker push lisandrodv27/backend-build"
