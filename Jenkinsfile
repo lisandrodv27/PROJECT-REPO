@@ -25,9 +25,9 @@ pipeline {
            }
          }
         
-        stage("K8s") {
-          steps {
+        //stage("K8s") {
+         // steps {
      
-          }
-        }
+         // }
+       // }
 }
