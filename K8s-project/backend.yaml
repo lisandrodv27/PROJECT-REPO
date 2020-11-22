@@ -19,3 +19,19 @@ spec:
         image: lisandrodv27/backend-build:latest
         ports: 
         - containerPort: 5001
+         env:
+        - name: DATABASE_URI
+          valueFrom:
+            secretKeyRef:
+              name: k8s-credentials
+              key: DATABASE_URI
+        - name: TEST_DATABASE_URI
+          valueFrom:
+            secretKeyRef:
+              name: k8s-credentials
+              key: TEST_DATABASE_URI
+        - name: secret_key
+          valueFrom:
+            secretKeyRef:
+              name: k8s-credentials
+              key: SECRET_KEY
