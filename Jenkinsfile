@@ -29,10 +29,12 @@ pipeline {
           }
         }
         
-        //stage("K8s") {
-         // steps {
+        stage("Run K8s") {
+          steps {
+            sh "chmod a+x ./scripts/k8s.sh"
+            sh "./scripts/k8s.sh"
      
-         // }
-       // }
+          }
+        }
     }
 }
