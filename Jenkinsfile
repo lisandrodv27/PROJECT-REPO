@@ -14,7 +14,8 @@ pipeline {
         stage("Run tests") {
            steps {
             sh "chmod a+x ./scripts/run-test.sh"
-            sh "ssh -i ~/.ssh/id_rsa ubuntu@${TEST_VM_IP} < './scripts/run-test.sh'"
+            sh "./scripts/run-test.sh"
+           // sh "ssh -i ~/.ssh/id_rsa ubuntu@${TEST_VM_IP} < './scripts/run-test.sh'"
            }
         }
         stage("Log into DockerHub") {
