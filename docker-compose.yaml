@@ -2,7 +2,7 @@ version: "3.7"
 services:
   frontend:
     build: ./frontend
-    image: frontend:latest
+    image: lisandrodv27/frontend:latest
     container_name: frontend
     ports:
     - target: 5000
@@ -11,12 +11,9 @@ services:
 
   backend:
     build: ./backend
-    image: backend:latest
+    image: lisandrodv27/backend:latest
     container_name: backend
     ports:
     - target: 5001
       published: 5001
       protocol: tcp
-    environment:
-      DATABASE_URI: ${DATABASE_URI}
-      TEST_DATABASE_URI: ${TEST_DATABASE_URI}
