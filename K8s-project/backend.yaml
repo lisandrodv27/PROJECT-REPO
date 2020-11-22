@@ -19,7 +19,7 @@ spec:
         image: lisandrodv27/backend-build:latest
         ports: 
         - containerPort: 5001
-         env:
+        env:
         - name: DATABASE_URI
           valueFrom:
             secretKeyRef:
