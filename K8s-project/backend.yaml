@@ -30,7 +30,7 @@ spec:
             secretKeyRef:
               name: k8s-credentials
               key: TEST_DATABASE_URI
-        - name: secret_key
+        - name: SECRET_KEY
           valueFrom:
             secretKeyRef:
               name: k8s-credentials
