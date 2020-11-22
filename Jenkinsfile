@@ -6,6 +6,12 @@ pipeline {
     }
     
     stages {
+        stage("Run docker-compose and tests") {
+           steps {
+            sh "chmod a+x ./scripts/run-test.sh"
+            sh "./scripts/run-test.sh"
+           }
+         }
         stage("Log into DockerHub") {
           steps {
               sh "sudo docker login --username=${docker_username} --password=${docker_password}"
@@ -25,13 +31,6 @@ pipeline {
             sh "./scripts/build-push.sh "
           }
         }
- 
-        stage("Run docker-compose and tests") {
-           steps {
-            sh "chmod a+x ./scripts/run-test.sh"
-            sh "./scripts/run-test.sh"
-           }
-         }
         
         //stage("K8s") {
          // steps {
