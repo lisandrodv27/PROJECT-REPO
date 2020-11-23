@@ -23,7 +23,7 @@ Infrastructure, Configuration & Cluster (Terraform, Ansible, K8s: relevant files
 
 # Jira Board
 
-![jiraboard](jiraboard.png)
+![jiraboard](https://albertatkinson.atlassian.net/jira/software/projects/DOP/boards/7)
 
 This project was planned in a 'reductionist' manner by fragmenting the requirements into approachable tasks. The MVP structure was utilised as a planning framework to tackle the different requirements by following a logical order- Infrastructure creation and configuration, container orchestration, pipeline automation, testing and deployment.
 
