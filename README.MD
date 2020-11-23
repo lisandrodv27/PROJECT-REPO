@@ -14,7 +14,7 @@ Infrastructure, Configuration & Cluster (Terraform, Ansible, K8s: relevant files
 - A CI Pipeline that supports the infrastructure implemented, detailing the different interdependencies of several technologies that aim to create a suitable environment for clients.
 
 # Project Objectives:
-- Fully functioning Terraform infrastructure with the use of modules. It must implement AWS EC2 instances, RDS' and an EKS cluster with the appropriate key security and basic instance configuration (AMI, instace type, Roles, etc.)
+- Fully functioning Terraform infrastructure with the use of modules. It must implement AWS EC2 instances, RDS' and an EKS cluster with the appropriate key security and basic instance configuration (AMI, instance type, etc.)
 - Using Ansible as a configuration management tool to install all the appropriate applications and dependencies that are used in this project.
 - Use of container orchestration applications, such as Docker and Kubernetes (K8S) for app deployment purposes.
 - Effective integration with a VSC (GitHub) with Jenkins in order to automate with the use of webhooks.
@@ -23,7 +23,7 @@ Infrastructure, Configuration & Cluster (Terraform, Ansible, K8s: relevant files
 
 # Jira Board
 
-![jiraboard][C:\Users\lisan\Downloads\jiraboard]
+![jiraboard](jiraboard)
 
 This project was planned in a 'reductionist' manner by fragmenting the requirements into approachable tasks. The MVP structure was utilised as a planning framework to tackle the different requirements by following a logical order- Infrastructure creation and configuration, container orchestration, pipeline automation, testing and deployment.
 
