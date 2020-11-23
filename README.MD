@@ -3,9 +3,9 @@
 ## Introduction
 The aim of this Dev Ops project is deploy to a flask application by implementing a software archictecture through the use of several technologie. In this README. file, I will go over the building process of this project by following the logical order of the MVP required. Hence, the role of Terraform (creating project infrastructure) and  Ansible (configuration management) creating favourable conditions to run this application.
 
-Jenkins Virtual Machine (Key Files & Scripts): https://github.com/lisandrodv27/PROJECT-REPO
+Jenkins Virtual Machine (Key Files & Scripts)- called PROJECT-REPO- https://github.com/lisandrodv27/PROJECT-REPO
 <br>
-Infrastructure, Configuration & Cluster (Terraform, Ansible, K8s: relevant files): https://github.com/lisandrodv27/dev-ops-vm
+Infrastructure, Configuration & Cluster (Terraform, Ansible, K8s: relevant files): -called Dev-Ops-VM https://github.com/lisandrodv27/dev-ops-vm
 <br>
 
 ## Project Deliverables & Requirements
