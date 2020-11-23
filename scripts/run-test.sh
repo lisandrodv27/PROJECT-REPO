@@ -1,5 +1,6 @@
 #! /bin/bash
 
+sudo docker ps -a -q | ForEach { docker stop $_ }
 sudo docker-compose down
 sudo docker-compose ps -a
 sudo rm -rf PROJECT-REPO
