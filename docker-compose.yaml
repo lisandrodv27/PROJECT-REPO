@@ -1,8 +1,8 @@
 version: "3.6"
 services:
   frontend:
-    build: ./frontend
-    image: lisandrodv27/frontend-image:latest
+    build: ./frontend/
+    image: lisandrodv27/frontend:latest
     container_name: frontend
     ports:
     - target: 5000
@@ -10,8 +10,8 @@ services:
       protocol: tcp
 
   backend:
-    build: ./backend
-    image: lisandrodv27/backend-image:latest
+    build: ./backend/
+    image: lisandrodv27/backend:latest
     container_name: backend
     ports:
     - target: 5001
