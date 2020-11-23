@@ -1,6 +1,6 @@
 # QA CNE DEV OPS PROJECT
 
-## Introduction.
+## Introduction
 The aim of this Dev Ops project is deploy to a flask application by implementing a software architecture through the use of several technologies. In this README.file, I will go over the building process of this project by following the logical order of the MVP required. Hence, the role of Terraform (creating project infrastructure) and  Ansible (configuration management) creating favourable conditions to run this application. Additionally, I will explain how this project has contributed to my personal development and how I intend to utilise the lessons learnt in the future.
 
 - Jenkins Virtual Machine (Key Files & Scripts)- called PROJECT-REPO- https://github.com/lisandrodv27/PROJECT-REPO
