@@ -7,8 +7,6 @@ Jenkins Virtual Machine (Key Files & Scripts)- called PROJECT-REPO- https://gith
 <br>
 Infrastructure, Configuration & Cluster (Terraform, Ansible, K8s: relevant files): -called Dev-Ops-VM https://github.com/lisandrodv27/dev-ops-vm
 <br>
-Jira Board: https://albertatkinson.atlassian.net/jira/software/projects/DOP/boards/7 
-<br>
 
 ## Project Deliverables & Requirements
 
