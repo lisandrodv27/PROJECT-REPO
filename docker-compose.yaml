@@ -18,5 +18,5 @@ services:
       published: 5001
       protocol: tcp
     environment:
-      DATABASE_URI=mysql+pymysql://root:password123@main-db.cpe0zmxz843f.eu-west-1.rds.amazonaws.com:3306/users
+    - DATABASE_URI=mysql+pymysql://root:password123@main-db.cpe0zmxz843f.eu-west-1.rds.amazonaws.com:3306/users
       TEST_DATABASE_URI=mysql+pymysql://root:password123@:test-db.cpe0zmxz843f.eu-west-1.rds.amazonaws.com:3306/testdb
